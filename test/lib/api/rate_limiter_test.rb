@@ -35,11 +35,11 @@ class Api::RateLimiterTest < ActiveSupport::TestCase
   end
 
   test 'ensure result limit_request value from perform_limit_request method return accordingly ' do
-    assert_not  @rate_limiter.result[:limit_request]
+    assert_not @rate_limiter.result[:limit_request]
   end
 
   test 'ensure result second_left value from perform_limit_request method return accordingly ' do
-    assert_equal 0, @rate_limiter.result[:second_left]
+    assert_equal 0, @rate_limiter.result[:seconds_left]
   end
 
 
