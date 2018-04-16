@@ -8,7 +8,7 @@ class Api::RateLimiterTest < ActiveSupport::TestCase
 
 
 
-  test 'valid rate limiter functionality working ' do
+  test 'check if rate limiter constraint working ' do
     5.times { @rate_limiter.perform_limit_request }
     assert @rate_limiter.result[:limit_request]
   end
